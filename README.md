@@ -1,5 +1,4 @@
-# BooDash
-
+# BooDash 
 ### General Instructions
 
 Our task is to create an Full-Stack employee directory web app. For the sake of time and familiarity, the language I will be using is TypeScript. To do so, we will make use of relevant technologies:
@@ -101,4 +100,6 @@ So far, I've got pagination, sorting, editing, uploading, and deleting. Now, I j
 
 ### Day 6
 
-Deployment! I'm going to be using Heroku to deploy this app! It's relatively straight forward, given the docs and my previous experience. One thing I'm not looking forward to is resolving the CORS errors, if they come up. It's a massive headache...
+Deployment! I'm going to be using Heroku to deploy this app! It's relatively straight forward, given the docs and my previous experience. One thing I'm not looking forward to is resolving the CORS errors, if they come up. It's a massive headache..
+
+*fast forward 2 hours* Yep, called it. I'm CORS error hell. For whatever reason, my local build can call the deployed back-end just fine but the deployed front-end receives a bunch of 'Same Origin Policy' errors, even though it's also in the whitelist. -__- No matter how many times I deploy things, I always end up here.  After a dozen or so more pushes to my private repository builds, I found out the error came from Apollo's fetch policies. I patched this up and BOOM! CORS errors resolved! I tested the final build a bit more and found a CSS bug on large screens. Once I patched this up, I submitted the final build!
