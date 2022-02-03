@@ -81,7 +81,7 @@ const EmployeeQueryTypes = {
           },
         ]).exec(),
         sort: Employee.find()
-          .sort({ [field]: [order] })
+          .sort({ [field]: order === 1 ? 'asc' : 'desc' })
           .skip(offset)
           .limit(limit)
           .exec(),

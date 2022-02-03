@@ -4,7 +4,7 @@ import * as graphqlHTTP from 'express-graphql'
 import * as cors from 'cors'
 
 import schema from './graphql/schema'
-import config from './config'
+import config, { corsOptions } from './config'
 
 import { connectDb } from './db'
 
@@ -14,9 +14,9 @@ const expressPlayground =
 
 connectDb()
 
-app.use('/graphql', graphqlHTTP.graphqlHTTP({ schema, graphiql: true }))
+app.use(cors(corsOptions))
 
-// app.use(cors({ origin: '*' }))
+app.use('/graphql', graphqlHTTP.graphqlHTTP({ schema, graphiql: true }))
 
 app.get('/playground', expressPlayground({ endpoint: '/graphql' }))
 

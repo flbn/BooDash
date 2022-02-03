@@ -12,6 +12,7 @@
   "scripts": {
     "start": "node build/src/index.js",
     "start:dev": "concurrently --kill-others 'npm run tsc:watch' 'npm run dev'",
+    "dev": "nodemon build/index.js",
     "lint": "npx tslint --init",
     "tsc": "./node_modules/.bin/tsc",
     "tsc:watch": "./node_modules/.bin/tsc -w",
@@ -20,7 +21,7 @@
     "compile": "tsc -p .",
     "fix": "gts fix",
     "prepare": "npm run compile",
-    "pretest": "npm run compile",
+    "pretest": "yarn run compile",
     "test": "NODE_ENV='test' mocha build/src/tests/*.test.js --exit",
     "script": "ts-node"
   },
