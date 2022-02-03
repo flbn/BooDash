@@ -10,8 +10,8 @@
   "license": "Apache-2.0",
   "keywords": [],
   "scripts": {
-    "start": "concurrently --kill-others 'npm run tsc:watch' 'npm run dev'",
-    "dev": "nodemon build/index.js",
+    "start": "node build/src/index.js",
+    "start:dev": "concurrently --kill-others 'npm run tsc:watch' 'npm run dev'",
     "lint": "npx tslint --init",
     "tsc": "./node_modules/.bin/tsc",
     "tsc:watch": "./node_modules/.bin/tsc -w",
