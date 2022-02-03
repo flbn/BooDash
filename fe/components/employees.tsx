@@ -96,7 +96,7 @@ export function EmployeesTable({clientEmployeesRef, setClientEmployeesRef, clien
             </div>
           </td>
 
-          <td className='px-4 py-3 text-sm font-medium'>{e.jobTitle}</td>
+          <td className='px-4 py-3 text-sm font-medium'><p className="bg-red-200 w-content inline">{e.jobTitle}</p></td>
 
           <td className='px-4 py-3 text-sm whitespace-nowrap font-medium'>${e.salary.toLocaleString('en-US')}</td>
 
