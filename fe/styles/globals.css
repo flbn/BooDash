@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* .close-button {
+  fill: url(#my-cool-gradient) #60a5fa;
+} */
+
+#gradient-horizontal {
+  --color-stop-1: #60a5fa;
+  --color-stop-2: #c084fc;
+  --color-stop-3: #f472b6;
+}
